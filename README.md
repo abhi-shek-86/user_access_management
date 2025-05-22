@@ -76,7 +76,7 @@ This project allows organizations to manage software access requests and approva
 ## 🖼️ Project Screenshots
 
 ### 🔐 Login Page
-![Login Page]([./assets/screenshots/login.png](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110312.png))
+![Login Page](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110312.png))
 
 ---
 
