@@ -80,23 +80,40 @@ This project allows organizations to manage software access requests and approva
 
 ---
 
-### 🏠 Dashboard
-![Dashboard](./assets/screenshots/dashboard.png)
+### 🔐 Signup Page
+![Signup Page](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110258.png))
+
 
 ---
 
-### 📝 Access Request Form
-![Access Request Form](./assets/screenshots/access-request.png)
 
----
-
-### ✅ Manager Approval Panel
-![Manager Panel](./assets/screenshots/manager-panel.png)
+### 🏠 Admin Dashboard
+![Admin_Dashboard](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110327.png)
 
 ---
 
 ### 🛠️ Admin - Add Software
-![Admin Add Software](./assets/screenshots/admin-add-software.png)
+![Admin Add Software](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110339.png)
+
+---
+
+
+### Employee Dashboard 
+![Employee_Dasgboard](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110651.png)
+
+---
+
+### Employee Request Page 
+![Access Request Form](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110554.png)
+
+---
+
+### ✅ Manager Dashboard Approval Panel
+![Manager Panel](https://github.com/abhi-shek-86/user_access_management/blob/main/assets/Screenshot%202025-05-22%20110619.png)
+
+---
+
+
 
 ---
 
