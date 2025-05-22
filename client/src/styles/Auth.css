@@ -1,0 +1,545 @@
+:root {
+  /* Professional orange color palette */
+  --orange-primary: #ff5722;      /* Main orange */
+  --orange-secondary: #ff7043;    /* Lighter orange for hover states */
+  --orange-accent: #ff8a65;       /* Soft orange for subtle elements */
+  --orange-light: #ffccbc;        /* Very light orange background */
+  --orange-ultra-light: #fff3f0;  /* Barely visible orange tint */
+  
+  /* Neutral colors */
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --gray-light: #f5f5f5;
+  --gray: #e0e0e0;
+  --text-dark: #333333;
+  --text-medium: #555555;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background: var(--white);
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styles */
+.auth-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 38px 32px 32px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 87, 34, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange-primary);
+}
+
+.auth-container > div {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.auth-container h2 {
+  margin: 0 0 28px;
+  color: var(--orange-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Form elements */
+.auth-container label,
+.request-access-form label {
+  width: 100%;
+  color: var(--text-medium);
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.auth-container input,
+.auth-container select,
+.auth-container textarea,
+.request-access-form input,
+.request-access-form select,
+.request-access-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--white);
+  transition: all 0.2s ease;
+  color: var(--text-dark);
+  box-sizing: border-box;
+}
+
+.auth-container input:focus,
+.auth-container select:focus,
+.auth-container textarea:focus,
+.request-access-form input:focus,
+.request-access-form select:focus,
+.request-access-form textarea:focus {
+  border-color: var(--orange-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.1);
+}
+
+/* Buttons */
+.auth-container button[type="submit"],
+.request-access-form button[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  background: var(--orange-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.08);
+}
+
+.auth-container button[type="submit"]:hover,
+.request-access-form button[type="submit"]:hover {
+  background: var(--orange-secondary);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.15);
+}
+
+.auth-container button[type="submit"]:active,
+.request-access-form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+.auth-container .auth-link {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-medium);
+  font-size: 0.95rem;
+}
+
+.auth-container .auth-link a {
+  color: var(--orange-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-container .auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+  padding: 16px 40px;
+  background: var(--white);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--orange-primary);
+  margin-right: 36px;
+}
+
+.navbar a {
+  color: var(--text-medium);
+  text-decoration: none;
+  margin-right: 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--orange-primary);
+}
+
+.navbar a.active {
+  color: var(--orange-primary);
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--orange-primary);
+}
+
+.navbar button {
+  margin-left: auto;
+  background: var(--white);
+  color: var(--orange-primary);
+  border: 1px solid var(--orange-primary);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar button:hover {
+  background: var(--orange-primary);
+  color: var(--white);
+}
+
+/* Request Access Form */
+.request-access-form {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 38px 32px 32px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 87, 34, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.request-access-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange-primary);
+}
+
+.request-access-form h2 {
+  margin: 0 0 28px;
+  color: var(--orange-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.request-access-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Manager Dashboard Styles */
+.manager-toggle-btns {
+  margin-bottom: 28px;
+  display: flex;
+  gap: 14px;
+}
+
+.manager-toggle-btns button {
+  background: var(--white);
+  color: var(--orange-primary);
+  border: 1px solid var(--orange-primary);
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.manager-toggle-btns button.active,
+.manager-toggle-btns button:hover {
+  background: var(--orange-primary);
+  color: var(--white);
+}
+
+.manager-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.manager-list li {
+  background: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.manager-list li:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--orange-light);
+}
+
+.manager-list b {
+  color: var(--orange-primary);
+  font-weight: 600;
+}
+
+.manager-list p {
+  margin: 8px 0;
+  color: var(--text-medium);
+}
+
+.manager-list button {
+  margin-top: 14px;
+  margin-right: 12px;
+  background: var(--orange-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.manager-list button:hover {
+  background: var(--orange-secondary);
+}
+
+.manager-list button:last-child {
+  background: var(--white);
+  color: var(--orange-primary);
+  border: 1px solid var(--orange-primary);
+}
+
+.manager-list button:last-child:hover {
+  background: var(--orange-primary);
+  color: var(--white);
+}
+
+/* Professional style for role selection in signup */
+.role-select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--text-dark);
+  transition: all 0.2s;
+  appearance: none;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' stroke='%23ff5722' viewBox='0 0 24 24'%3E%3Cpath stroke-width='2' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.role-select:focus {
+  border-color: var(--orange-primary);
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.1);
+}
+
+/* Create Software Form Styles */
+.create-software-form {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 38px 32px 32px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 87, 34, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.create-software-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange-primary);
+}
+
+.create-software-form h2 {
+  margin: 0 0 28px;
+  color: var(--orange-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.create-software-form input,
+.create-software-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--text-dark);
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.create-software-form input:focus,
+.create-software-form textarea:focus {
+  border-color: var(--orange-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.1);
+}
+
+.create-software-form label {
+  color: var(--text-medium);
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.create-software-form .checkbox-group {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.create-software-form button[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  background: var(--orange-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.08);
+}
+
+.create-software-form button[type="submit"]:hover {
+  background: var(--orange-secondary, #ff7043);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.15);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 16px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.status-approved {
+  background: #e6f9ed;
+  color: #1b8a3a;
+  border: 1px solid #1b8a3a;
+}
+
+.status-rejected {
+  background: #ffeaea;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.status-pending {
+  background: #fff7e6;
+  color: #ff9800;
+  border: 1px solid #ff9800;
+}
+
+/* Optional: Add some animations and effects */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-container, 
+.request-access-form,
+.create-software-form {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-container,
+  .request-access-form,
+  .create-software-form {
+    max-width: 90%;
+    padding: 28px 20px;
+    margin: 40px auto;
+  }
+  
+  .navbar {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar a {
+    margin-right: 16px;
+  }
+  
+  .create-software-form {
+    max-width: 95%;
+    padding: 28px 14px;
+    margin: 30px auto;
+  }
+}
+
+.create-software-btn {
+  background: var(--orange-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.08);
+  margin-bottom: 24px;
+  letter-spacing: 0.03em;
+}
+
+.create-software-btn:hover {
+  background: var(--orange-secondary, #ff7043);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.15);
+}
